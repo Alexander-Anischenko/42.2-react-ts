@@ -6,17 +6,17 @@ function Feedback() {
     const [countLike, setLike] = useState(0);
     const [countDislike, setDislike] = useState(0);
 
-    const onLikeClick = () => {
+    const onLikeClick = (): void => {
         setLike((plusLike) => (plusLike < 99 ? plusLike + 1 : plusLike));
     };
 
-    const onDislikeClick = () => {
+    const onDislikeClick = (): void => {
         setDislike((plusDislike) =>
             plusDislike < 99 ? plusDislike + 1 : plusDislike
         );
     };
 
-    const onResetClick = () => {
+    const onResetClick = (): void => {
         setLike(0);
         setDislike(0);
     };
@@ -24,7 +24,7 @@ function Feedback() {
     return (
         <div className="feetback-wrapper">
             <div className="button-feetback-wrapper">
-                <div className="result like" max="100">
+                <div className="result like">
                     {countLike}
                 </div>
                 <Button buttonName="Like" onClick={onLikeClick} />

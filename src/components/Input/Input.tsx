@@ -1,6 +1,15 @@
 import "./styles.css";
+import { InputProps } from "./type";
 
-function Input({ name, type, placeholder, label, id }) {
+/* interface InputProps {
+    name?: string
+    type?: React.HTMLInputTypeAttribute
+    placeholder?: string
+    id?: string
+    label: React.ReactNode
+} */
+
+function Input({ name, type, placeholder, label, id }: InputProps) {
     return (
         <div className="input-wrapper">
             <label htmlFor={id}>{label}</label>
