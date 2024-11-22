@@ -15,11 +15,11 @@ function Counter() {
     const setCount = result[1];
     console.log(setCount); */
 
-    const onPlusClick = () => {
+    const onPlusClick = (): void => {
         setCount((preValue) => preValue + 1);
     };
 
-    const onMinusClick = () => {
+    const onMinusClick = (): void => {
         setCount((preValue) => preValue - 1);
     };
 
