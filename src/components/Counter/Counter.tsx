@@ -8,18 +8,11 @@ function Counter() {
     //делаеммдеструктуризацию массива из двух элементов, который возвращает хук useState
     const [count, setCount] = useState(0);
 
-    /* const result = useState(0);
-    console.log(result);
-    const count = result[0];
-    console.log(count);
-    const setCount = result[1];
-    console.log(setCount); */
-
-    const onPlusClick = () => {
+    const onPlusClick = (): void => {
         setCount((preValue) => preValue + 1);
     };
 
-    const onMinusClick = () => {
+    const onMinusClick = (): void => {
         setCount((preValue) => preValue - 1);
     };
 

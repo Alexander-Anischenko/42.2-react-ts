@@ -1,7 +1,8 @@
 import "./styles.css";
+import { ButtonProps } from "./types";
 
 //props ='значение по умолчанию(default)'
-function Button({ buttonName, type = "button", onClick }) {
+function Button({ buttonName, type = "button", onClick }: ButtonProps) {
     //console.log(props);
 
     return (
@@ -9,6 +10,6 @@ function Button({ buttonName, type = "button", onClick }) {
             {buttonName}
         </button>
     );
-}
+};
 
 export default Button;
