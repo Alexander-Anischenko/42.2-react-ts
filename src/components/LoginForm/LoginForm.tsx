@@ -1,5 +1,5 @@
 import "./styles.css";
-/* import Button from "../Button/Button"; */
+import Button from "../Button/Button";
 import Input from "../Input/Input";
 
 function LoginForm() {
@@ -22,7 +22,7 @@ function LoginForm() {
                     id="password-id"
                 />
             </div>
-            {/* <Button buttonName="Login" /> */}
+            <Button buttonName="Login" />
         </form>
     );
 }
