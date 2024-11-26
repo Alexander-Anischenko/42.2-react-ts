@@ -1,11 +1,5 @@
 import "./styles.css";
-import { ButtonProps } from "./type";
-
-/* interface ButtonProps{
-    buttonName?: string
-    type?: string
-    onClick?: any
-}; */
+import { ButtonProps } from "./types";
 
 //props ='значение по умолчанию(default)'
 function Button({ buttonName, type = "button", onClick }: ButtonProps) {

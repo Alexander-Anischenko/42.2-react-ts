@@ -3,5 +3,5 @@ export interface InputProps {
     type?: React.HTMLInputTypeAttribute;
     placeholder?: string;
     id?: string;
-    label: React.ReactNode;
+    label: string;
 }
