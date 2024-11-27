@@ -6,7 +6,8 @@ import { useState } from "react";
 function Counter() {
     //Шаг 2 вызываем хук и передаем в него начальное состояние(initialState)
     //делаеммдеструктуризацию массива из двух элементов, который возвращает хук useState
-    const [count, setCount] = useState(0);
+    /* const [count, setCount] = useState<number | undefined>(0); */
+    const [count, setCount] = useState<number>(0);
 
     const onPlusClick = (): void => {
         setCount((preValue) => preValue + 1);

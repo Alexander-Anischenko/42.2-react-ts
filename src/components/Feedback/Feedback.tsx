@@ -3,8 +3,8 @@ import Button from "../Button/Button";
 import { useState } from "react";
 
 function Feedback() {
-    const [countLike, setLike] = useState(0);
-    const [countDislike, setDislike] = useState(0);
+    const [countLike, setLike] = useState<number>(0);
+    const [countDislike, setDislike] = useState<number>(0);
 
     const onLikeClick = (): void => {
         setLike((plusLike) => (plusLike < 99 ? plusLike + 1 : plusLike));

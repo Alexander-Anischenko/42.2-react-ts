@@ -1,10 +1,11 @@
 import "./styles.css";
 import { InputProps } from "./types";
 
-function Input({ name, type, placeholder, label, id }: InputProps) {
+function Input({ name, type = 'text', placeholder, label, id }: InputProps) {
     return (
         <div className="input-wrapper">
-            <label htmlFor={id}>{label}</label>
+            {/* Пример оператора условного рендеринга */}
+            {label && <label htmlFor={id}>{label}</label>}
             <input
                 type={type}
                 placeholder={placeholder}
