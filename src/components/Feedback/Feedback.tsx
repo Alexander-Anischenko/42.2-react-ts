@@ -1,4 +1,8 @@
-import "./styles.css";
+import {
+    FeedbackWrapper,
+    ButtonFeedbackWrapper,
+    ResultComtainer
+} from "./styles.ts";
 import Button from "../Button/Button";
 import { useState } from "react";
 
@@ -22,21 +26,19 @@ function Feedback() {
     };
 
     return (
-        <div className="feetback-wrapper">
-            <div className="button-feetback-wrapper">
-                <div className="result like">
-                    {countLike}
-                </div>
+        <FeedbackWrapper>
+            <ButtonFeedbackWrapper>
+                <ResultComtainer like>{countLike}</ResultComtainer>
                 <Button buttonName="Like" onClick={onLikeClick} />
-            </div>
-            <div className="button-reset-wrapper">
+            </ButtonFeedbackWrapper>
+            <ButtonFeedbackWrapper>
                 <Button buttonName="Reset Results" onClick={onResetClick} />
-            </div>
-            <div className="button-feetback-wrapper">
+            </ButtonFeedbackWrapper>
+            <ButtonFeedbackWrapper>
                 <Button buttonName="Dislike" onClick={onDislikeClick} />
-                <div className="result dislike">{countDislike}</div>
-            </div>
-        </div>
+                <ResultComtainer>{countDislike}</ResultComtainer>
+            </ButtonFeedbackWrapper>
+        </FeedbackWrapper>
     );
 }
 
