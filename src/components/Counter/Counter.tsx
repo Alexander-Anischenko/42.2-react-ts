@@ -1,7 +1,8 @@
 import Button from "../Button/Button";
-import "./styles.css";
+import "./styles.ts";
 ///Шаг 1 вызов хука из React
 import { useState } from "react";
+import { CounterContainer, ButtonWrapper, CounterResult } from "./styles.ts";
 
 function Counter() {
     //Шаг 2 вызываем хук и передаем в него начальное состояние(initialState)
@@ -18,15 +19,15 @@ function Counter() {
     };
 
     return (
-        <div className="counter-container">
-            <div className="button-wrapper">
+        <CounterContainer>
+            <ButtonWrapper>
                 <Button buttonName="-" onClick={onMinusClick} />
-            </div>
-            <div className="counter-result">{count}</div>
-            <div className="button-wrapper">
+            </ButtonWrapper>
+            <CounterResult>{count}</CounterResult>
+            <ButtonWrapper>
                 <Button buttonName="+" onClick={onPlusClick} />
-            </div>
-        </div>
+            </ButtonWrapper>
+        </CounterContainer>
     );
 }
 

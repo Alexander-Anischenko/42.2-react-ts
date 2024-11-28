@@ -1,15 +1,11 @@
-import "./styles.css";
 import { ButtonProps } from "./types";
+import { MainButton } from "./styles.ts";
 
 //props ='значение по умолчанию(default)'
-function Button({ buttonName, type = "button", onClick }: ButtonProps) {
+function Button({ buttonName, type = "button", onClick, }: ButtonProps,) {
     //console.log(props);
 
-    return (
-        <button className="main-button" onClick={onClick}>
-            {buttonName}
-        </button>
-    );
-};
+    return <MainButton onClick={onClick} >{buttonName}</MainButton>;
+}
 
 export default Button;
