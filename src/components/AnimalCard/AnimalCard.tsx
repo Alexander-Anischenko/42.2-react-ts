@@ -1,11 +1,11 @@
 import { AnimalCardProps } from "./types";
-import { AnimalCardWrapper, AnimalImg } from "./styles.ts";
+import { AnimalCardWrapper, AnimalImg, AnimalH3, AnimalSpecsContainer } from "./styles.ts";
 
 function AnimalCard({ animalData }: AnimalCardProps) {
     return (
         <AnimalCardWrapper>
-            <h3>{animalData.name}</h3>
-            <div>{animalData.species}</div>
+            <AnimalH3>{animalData.name}</AnimalH3>
+            <AnimalSpecsContainer>{animalData.species}</AnimalSpecsContainer>
             <AnimalImg src={animalData.image} alt="" />
         </AnimalCardWrapper>
     );

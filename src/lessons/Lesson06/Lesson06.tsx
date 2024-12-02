@@ -1,4 +1,4 @@
-import "./styles.css";
+import {Lesson06Container} from"./styles.ts";
 
 function Lesson06() {
     // 1 Типизайия строк
@@ -125,7 +125,7 @@ function Lesson06() {
         city: "Berlin",
     };
 
-    return <div className="lesson06-container">Lesson 6 - Type Script</div>;
+    return <Lesson06Container>Lesson 6 - Type Script</Lesson06Container>;
 }
 
 export default Lesson06;

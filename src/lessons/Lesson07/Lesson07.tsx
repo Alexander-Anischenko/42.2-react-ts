@@ -1,5 +1,4 @@
-import { BoxInfo } from "../Lesson07/styles";
-import "./styles.css";
+import { BoxInfo, Lesson07Container} from "../Lesson07/styles";
 
 function Lesson07() {
     //Generic
@@ -56,13 +55,13 @@ function Lesson07() {
         color: 'blue',
         fontSize: '24px'
     }
-    return <div className="lesson07-container">
+    return <Lesson07Container>
         {/* <div style={{color: 'green'}}>Inline style example 1</div> */}
         <div style={textStyles}>Inline style example 1</div>
         <p style={textStyles}>Inline style example 2</p>
         <BoxInfo primary>Emotion Example</BoxInfo>
         <BoxInfo>Emotion Example</BoxInfo>
-    </div>;
+    </Lesson07Container>;
 }
 
 export default Lesson07;

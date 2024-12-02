@@ -1,10 +1,11 @@
 //@import url(https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic);
 import styled from "@emotion/styled";
-import { ButtonProps } from "./types";
 
+interface MainButtonProps {
+    disabled: boolean;
+}
 
-
-export const MainButton = styled.button<ButtonProps>`
+export const MainButton = styled.button<MainButtonProps>`
     width: 100%;
     height: 70px;
     padding: 20px;
