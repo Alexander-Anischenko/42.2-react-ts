@@ -5,8 +5,14 @@ function Homework07() {
     return (
         <HomeWork07Container>
             <ButtonContainer>
-                <Button buttonName="Disabled" disabled />
-                <Button buttonName="Enabled" />
+                <Button buttonName="Disabled" disabled onClick={() =>{
+                    console.log('Button works');
+                    
+                }}/>
+                <Button buttonName="Enabled" onClick={() =>{
+                    console.log('Button don`t works');
+                    
+                }}/>
             </ButtonContainer>
         </HomeWork07Container>
     );
