@@ -16,7 +16,7 @@ export const MainButton = styled.button<MainButtonProps>`
     color: aliceblue;
     border: none;
     border-radius: 4px;
-    cursor: pointer;
+    cursor: ${({ disabled }) => disabled ? 'auto' : 'pointer'};
 
     &:hover {
         background-color: #1f26f5cc;
