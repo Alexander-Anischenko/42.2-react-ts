@@ -10,7 +10,7 @@ import GlobalStyles from "./styles/GlobalStyles";
 //homeworks
 /* import Homework07 from './homeworks/Homework07/Homework07'; */
 /* import Homework08 from "./homeworks/Homework08/Homework08"; */
-import Homework09 from "./homeworks/Homework09/Homework09";
+import Homework09 from "./homeworks/Homework009/Homework09";
 
 //consultations
 /* import Consultation04 from './consultations/Consultation04/Consultation04'; */
