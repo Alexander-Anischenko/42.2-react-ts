@@ -13,21 +13,19 @@ import {
 
 function Homework08() {
     const [inputNameValue, setInputNameValue] = useState<string>("");
-
+    const [inputLastNameValue, setInputLastNameValue] = useState<string>("");
+    const [outputData, setOutputData] = useState<{
+        name: string;
+        lastName: string;
+    }>(Object);
+    
     const onChangeNameInput = (event: ChangeEvent<HTMLInputElement>) => {
         setInputNameValue(event.target.value);
     };
 
-    const [inputLastNameValue, setInputLastNameValue] = useState<string>("");
-
     const onChangeLastNameInput = (event: ChangeEvent<HTMLInputElement>) => {
         setInputLastNameValue(event.target.value);
     };
-
-    const [outputData, setOutputData] = useState<{
-        name: string;
-        lastName: string;
-    }>("");
 
     const clickDisplayData = () => {
         setOutputData({ name: inputNameValue, lastName: inputLastNameValue });
