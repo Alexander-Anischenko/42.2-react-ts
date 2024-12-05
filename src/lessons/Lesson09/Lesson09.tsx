@@ -26,8 +26,8 @@ function Lesson09() {
 
     //useEffect при монтирование (mouting) -пустой массив зависимостей
     useEffect(() => {
-        console.log("mounting", []);
-    });
+        console.log("mounting");
+    }, []);
 
     //useEffect при обновление (update) - массив зависимостей c переменной (state, props)
     useEffect(() => {
