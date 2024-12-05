@@ -11,10 +11,12 @@ function Counter({countValue, onMinus, onPlus}: CounterProps) {
     /* const [count, setCount] = useState<number | undefined>(0); */
     /* const [count, setCount] = useState<number>(0); */
 
+
+    //Шаг 3 - необходимо прописать функции, которые будут менять состояние. Внутри этих функций нужно использовать setCount
     /* const onPlusClick = (): void => {
         setCount((preValue) => preValue + 1);
     };
-//Шаг 3 - необходимо прописать функции, которые будут менять состояние. Внутри этих функций нужно использовать setCount
+
     const onMinusClick = (): void => {
         setCount((preValue) => preValue - 1);
     }; */

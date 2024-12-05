@@ -7,3 +7,8 @@ export const Lesson09Container = styled.div`
     gap: 30px;
     flex: 1;
 `;
+
+export const ResultBlock = styled.div`
+    padding: 10px;
+    border: 2px solid blueviolet;
+`;

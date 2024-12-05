@@ -1,3 +1,5 @@
+import { ChangeEvent } from "react";
+
 export interface InputProps {
     name: string;
     type?: React.HTMLInputTypeAttribute;
@@ -5,5 +7,5 @@ export interface InputProps {
     id?: string;
     label?: string;
     value?: string | number | readonly string[] | undefined;
-    onChange?: React.ChangeEventHandler<HTMLInputElement>;
+    onChange?: (event: ChangeEvent<HTMLInputElement>) => void//React.ChangeEventHandler<HTMLInputElement>;
 }
