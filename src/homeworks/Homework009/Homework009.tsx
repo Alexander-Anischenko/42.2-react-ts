@@ -1,9 +1,9 @@
 import { ChangeEvent, useEffect, useState } from "react";
 import axios from "axios";
-import { DogImg, ErrorMessage, Homework09Component, Spinner } from "./styles";
+import { DogImg, ErrorMessage, Homework009Component, Spinner } from "./styles";
 import Input from "../../components/Input/Input";
 
-function Homework09() {
+function Homework009() {
     const [search, setSearch] = useState<string>("");
     const [note, setNote] = useState<string>("");
     const [dogImageUrl, setDogImageUrl] = useState<string | undefined>(
@@ -46,7 +46,7 @@ function Homework09() {
     },[search])
 
     return (
-        <Homework09Component>
+        <Homework009Component>
             <Input
                 name="search"
                 placeholder="Enter word"
@@ -62,7 +62,7 @@ function Homework09() {
             {dogImageUrl && <DogImg src={dogImageUrl} alt="random dog" />}
             {error && <ErrorMessage>{error.mesage}</ErrorMessage>}
             {isLoading && <Spinner></Spinner>}
-        </Homework09Component>
+        </Homework009Component>
     );
 }
-export default Homework09;
+export default Homework009;
