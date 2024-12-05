@@ -4,4 +4,6 @@ export interface InputProps {
     placeholder?: string;
     id?: string;
     label?: string;
+    value?: string | number | readonly string[] | undefined;
+    onChange?: React.ChangeEventHandler<HTMLInputElement>;
 }
