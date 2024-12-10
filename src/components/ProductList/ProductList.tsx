@@ -6,7 +6,7 @@ import { Product } from "./types";
 function ProductList() {
 
     const productList = (productData.map((product: Product) => {
-        return <ProductItem productImg={product.img} productName={product.product} onCadrClick={()=>{}}/>
+        return <ProductItem productImg={product.img} productName={product.product}/>
     }))
     return <ProductListContainer>
         {productList}
