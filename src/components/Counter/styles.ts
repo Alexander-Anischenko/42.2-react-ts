@@ -9,6 +9,11 @@ export const CounterContainer = styled.div`
     padding: 20px;
     background-color: rgb(200, 212, 216);
     border-radius: 4px;
+
+    @media (max-width: 600px){
+        background-color: rgb(57, 131, 156);
+        flex-direction: column;
+    }
 `;
 export const ButtonWrapper = styled.div`
     width: 100px;
