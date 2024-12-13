@@ -39,3 +39,6 @@ border: 1px solid;
 border-radius: 3px;
 background-color: aliceblue;
 `;
+
+export const ErrorMessage = styled.div`
+`;

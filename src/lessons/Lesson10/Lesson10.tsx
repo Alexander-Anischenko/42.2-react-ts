@@ -7,6 +7,7 @@ import {
     ButtonWrapper,
     DataOutput,
     DataOutputWrapper,
+    ErrorMessage,
     GeneralWrapper,
     Lesson10Container,
 } from "./styles";
@@ -15,7 +16,7 @@ function Lesson10() {
     // Состояние массива строк фактов о котах
     const [catFacts, setCatFacts] = useState<string[]>([]);
     //Состояние выполнения запроса
-    const [isButtonPushed, setIsButtonPushed] = useState<boolean>(false);
+    const [error, setError] = useState<any>(undefined);
 
     //переменная содержащая URL
     const CAT_FACT_URL = "https://catfact.ninja/fact";
@@ -23,18 +24,18 @@ function Lesson10() {
     const fetchCatFacts = async () => {
         try {
             const response = await axios.get(CAT_FACT_URL);
-            //console.log(response);
+    console.log(response);
             setCatFacts((prevCatFacts) => [
                 ...prevCatFacts,
                 response.data.fact,
             ]);
-        } catch (err) {
-            console.log(err);
+        } catch (error: any) {
+            setError(error)
         }
     };
 
     const getMoreCatFactsData = () => {
-        setIsButtonPushed(true);
+        fetchCatFacts();
     };
 
     const deleteCatFacts = () => {
@@ -44,14 +45,6 @@ function Lesson10() {
     useEffect(() => {
         fetchCatFacts();
     }, []);
-
-    useEffect(() => {
-        if (isButtonPushed) {
-            fetchCatFacts();
-            setIsButtonPushed(false);
-        }
-    }, [isButtonPushed]);
-
     
 
     const renderFacts = () => {
@@ -71,6 +64,7 @@ function Lesson10() {
                         onClick={getMoreCatFactsData}
                     />
                     {catFacts.length> 0 && <Button buttonName="DELETE ALL DATA" onClick={deleteCatFacts}/>}
+                    {error && <ErrorMessage>{error.message}</ErrorMessage>}
                 </ButtonWrapper>
                 <DataOutputWrapper>
                 {catFacts.length> 0 && renderFacts()
