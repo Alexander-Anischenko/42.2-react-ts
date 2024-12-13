@@ -11,7 +11,7 @@ import Home from "./pages/Home/Home";
 //import Lesson07 from './lessons/Lesson07/Lesson07';
 //import Lesson08 from './lessons/Lesson08/Lesson08';
 //import Lesson09 from "./lessons/Lesson09/Lesson09";
-//import Lesson10 from "./lessons/Lesson10/Lesson10";
+import Lesson10 from "./lessons/Lesson10/Lesson10";
 
 //homeworks
 /* import Homework07 from './homeworks/Homework07/Homework07'; */
