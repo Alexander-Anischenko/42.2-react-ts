@@ -8,4 +8,5 @@ export interface InputProps {
     label?: string;
     value?: string | number | readonly string[] | undefined;
     onChange?: (event: ChangeEvent<HTMLInputElement>) => void//React.ChangeEventHandler<HTMLInputElement>;
+    error?: string;
 }

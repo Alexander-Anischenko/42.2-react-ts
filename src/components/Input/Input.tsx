@@ -1,7 +1,7 @@
-import{ InputWrapper, Label, InputStyle } from "./styles.ts";
+import{ InputWrapper, Label, InputStyle, ErrorMessage } from "./styles.ts";
 import { InputProps } from "./types";
 
-function Input({ name, type = 'text', placeholder, label, id, value, onChange }: InputProps) {
+function Input({ name, type = 'text', placeholder, label, id, value, onChange, error }: InputProps) {
     return (
         <InputWrapper>
             {/* Пример оператора условного рендеринга */}
@@ -15,6 +15,8 @@ function Input({ name, type = 'text', placeholder, label, id, value, onChange }:
                 value={value}
                 onChange={onChange}
             />
+            <ErrorMessage>{error}</ErrorMessage>
+            {/* {error && <ErrorMessage>{error}</ErrorMessage>} */}
         </InputWrapper>
     );
 }
