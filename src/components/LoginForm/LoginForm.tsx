@@ -7,6 +7,7 @@ import { LoginFormWrapper, LoginFormTitle, InputsContainer } from "./styles.ts";
 import { LoginFormValue, LOGIN_FORM_NAMES } from "./types.ts";
 
 function LoginForm() {
+    const nameRegex = /^[a-zA-Z]+$/;
     // создаем валидационную форму(форму проверки на валидность) через Yup
     const shema = Yup.object().shape({
         [LOGIN_FORM_NAMES.EMAIL]: Yup.string()
@@ -20,8 +21,20 @@ function LoginForm() {
         [LOGIN_FORM_NAMES.PASSWORD]: Yup.number()
             .required("Field password is required")
             .typeError("Password must be number")
-            .test('Check min password length', 'Min 10 symbols', value => String(value).length >= 10)
-            .test('Check max password length', 'Max 20 symbols', value => String(value).length <=20),
+            .test(
+                "Check min password length",
+                "Min 10 symbols",
+                (value) => String(value).length >= 10
+            )
+            .test(
+                "Check max password length",
+                "Max 20 symbols",
+                (value) => String(value).length <= 20
+            ),
+            [LOGIN_FORM_NAMES.USER_NAME]: Yup.string()
+            .required("Field user name is required")
+            .test("Check min user name length", "Min 2 and max 30 symbols", (value) => value.length >= 2 && value.length <= 30)
+            .matches(nameRegex, 'The letters must be in Latin'),
         //проверки max и min работают с числовыми значениями и
         //они указывает на минимальное и минимальное значение в поле(!не количество сиволов)
         //.max(150, "Max 150")
@@ -34,11 +47,13 @@ function LoginForm() {
             // начальные значения используем брэкет-синтаксис обращаясь к emum
             [LOGIN_FORM_NAMES.EMAIL]: "",
             [LOGIN_FORM_NAMES.PASSWORD]: "",
+            [LOGIN_FORM_NAMES.USER_NAME]:'',
         } as LoginFormValue,
         // типизация через 'as'  осуществляется в случае когда типизируется одно из свойств объекта в основном нужно для дальнейшей поддержки кода
         //----------------------------------------
         //привязка валидационной схемы Yup к формику формы LoginForm
         validationSchema: shema,
+        //Валидация при заполнении отключена
         validateOnChange: false,
         //validateOnMount:true,
         onSubmit: (values: LoginFormValue) => {
@@ -53,6 +68,15 @@ function LoginForm() {
         <LoginFormWrapper onSubmit={formik.handleSubmit}>
             <LoginFormTitle>Login form</LoginFormTitle>
             <InputsContainer>
+                <Input 
+                label="User name*"
+                id="userName"
+                placeholder="Enter user name"
+                name={LOGIN_FORM_NAMES.USER_NAME}
+                value={formik.values[LOGIN_FORM_NAMES.USER_NAME]}
+                onChange={formik.handleChange}
+                error={formik.errors[LOGIN_FORM_NAMES.USER_NAME]}
+                />
                 <Input
                     label="Email*"
                     placeholder="Enter your email"
