@@ -2,6 +2,7 @@ import { BrowserRouter, /* Route, Routes */ } from "react-router-dom";
 
 import GlobalStyles from "./styles/GlobalStyles";
 
+
 /* import Layout from "./components/Layout/Layout";
 import About from "./pages/About/About";
 import Users from "./pages/Users/User";
@@ -13,7 +14,7 @@ import Home from "./pages/Home/Home"; */
 //import Lesson08 from './lessons/Lesson08/Lesson08';
 //import Lesson09 from "./lessons/Lesson09/Lesson09";
 //import Lesson10 from "./lessons/Lesson10/Lesson10";
-import Lesson11 from "./lessons/Lesson11";
+//import Lesson11 from "./lessons/Lesson11/Lesson11";
 
 
 //homeworks
@@ -21,6 +22,7 @@ import Lesson11 from "./lessons/Lesson11";
 /* import Homework08 from "./homeworks/Homework08/Homework08"; */
 //import Homework009 from "./homeworks/Homework009/Homework009";
 //import HomeWork09 from "./homeworks/HomeWork09/HomeWork09";
+import HomeWork11 from "./homeworks/HomeWork11/HomeWork11";
 
 //consultations
 //import Consultation04 from "./consultations/Consultaion04/Consultation04";
@@ -47,7 +49,8 @@ function App() {
             {/* <Lesson09/> */}
             {/* /<HomeWork09/> */}
             {/* <Lesson10/> */}
-            <Lesson11/>
+            {/* <Lesson11/> */}
+            <HomeWork11/>
         </BrowserRouter>
     );
 }
