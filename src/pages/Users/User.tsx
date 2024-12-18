@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import Button from "../../components/Button/Button";
@@ -9,6 +10,13 @@ function Users() {
     const goToAboutPage = () => {
         navigate("/about");
     };
+
+    useEffect(()=>{
+        return()=>{
+            console.log('Component Users unmounting');
+            
+        }
+    }, [])
 
     return (
         <UsersPage>
