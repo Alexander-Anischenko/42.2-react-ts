@@ -22,6 +22,7 @@ import Lesson13 from "./lessons/Lesson13/Lesson13";
 /* import Homework08 from "./homeworks/Homework08/Homework08"; */
 //import Homework009 from "./homeworks/Homework009/Homework009";
 //import HomeWork09 from "./homeworks/HomeWork09/HomeWork09";
+import HomeWork11 from "./homeworks/HomeWork11/HomeWork11";
 
 //consultations
 //import Consultation04 from "./consultations/Consultaion04/Consultation04";
@@ -50,6 +51,8 @@ function App() {
             {/* /<HomeWork09/> */}
             {/* <Lesson10/> */}
             {/* <Lesson11/> */}
+            {/* <HomeWork11/> */}
+
         </BrowserRouter>
     );
 }

@@ -1,5 +1,6 @@
-import LoginForm from "../components/LoginForm/LoginForm";
-import { Lesson11Container } from "./Lesson11/styles";
+import LoginForm from "../../components/LoginForm/LoginForm";
+import { Lesson11Container } from "./styles";
+
 
 function Lesson11() {
     return <Lesson11Container>
