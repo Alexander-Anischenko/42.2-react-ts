@@ -6,6 +6,11 @@ import Layout from "./components/Layout/Layout";
 import About from "./pages/About/About";
 import Users from "./pages/Users/User";
 import Home from "./pages/Home/Home";
+import Clients from "./pages/Clients/Clients";
+import Tesla from "./pages/Clients/components/Tesla/Tesla";
+import Toyota from "./pages/Clients/components/Toyota/Toyota";
+import Volkswagen from "./pages/Clients/components/Volkswagen/Volkswagen";
+
 
 //lessons
 //import Lesson06 from './lessons/Lesson06/Lesson06';
@@ -22,7 +27,8 @@ import Lesson13 from "./lessons/Lesson13/Lesson13";
 /* import Homework08 from "./homeworks/Homework08/Homework08"; */
 //import Homework009 from "./homeworks/Homework009/Homework009";
 //import HomeWork09 from "./homeworks/HomeWork09/HomeWork09";
-import HomeWork11 from "./homeworks/HomeWork11/HomeWork11";
+//import HomeWork11 from "./homeworks/HomeWork11/HomeWork11";
+
 
 //consultations
 //import Consultation04 from "./consultations/Consultaion04/Consultation04";
@@ -37,6 +43,10 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/users" element={<Users />} />
+                    <Route path="/clients" element={<Clients />} />
+                    <Route path="/clients/tesla" element={<Tesla />} />
+                    <Route path="/clients/toyota" element={<Toyota />} />
+                    <Route path="/clients/volkswagen" element={<Volkswagen />} />
                     <Route path="/lesson13" element={<Lesson13 />} />
                     <Route path='*' element='Page not found' />
                 </Routes>
