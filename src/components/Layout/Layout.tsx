@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import {
     Footer,
     Header,
@@ -13,7 +15,9 @@ function Layout({ children }: LayoutProps) {
     return (
         <LayoutComponent>
             <Header>
-                <LogoContainer></LogoContainer>
+                <Link to="/">
+                    <LogoContainer></LogoContainer>
+                </Link>
                 <NavContainer>
                     <StyledNavLink
                         to="/"
@@ -40,6 +44,14 @@ function Layout({ children }: LayoutProps) {
                         Users
                     </StyledNavLink>
                     <StyledNavLink
+                        to="/clients"
+                        style={({ isActive }) => ({
+                            textDecoration: isActive ? "underline" : "none",
+                        })}
+                    >
+                        Clients
+                    </StyledNavLink>
+                    <StyledNavLink
                         to="/lesson13"
                         style={({ isActive }) => ({
                             textDecoration: isActive ? "underline" : "none",
@@ -49,9 +61,7 @@ function Layout({ children }: LayoutProps) {
                     </StyledNavLink>
                 </NavContainer>
             </Header>
-            <Main>
-                {children}
-            </Main>
+            <Main>{children}</Main>
             <Footer>
                 <LogoContainer></LogoContainer>
             </Footer>
