@@ -4,12 +4,13 @@ import GlobalStyles from "./styles/GlobalStyles";
 
 import Layout from "./components/Layout/Layout";
 import About from "./pages/About/About";
-import Users from "./pages/Users/User";
+
 import Home from "./pages/Home/Home";
 import Clients from "./pages/Clients/Clients";
 import Tesla from "./pages/Clients/components/Tesla/Tesla";
 import Toyota from "./pages/Clients/components/Toyota/Toyota";
 import Volkswagen from "./pages/Clients/components/Volkswagen/Volkswagen";
+
 
 
 //lessons
@@ -20,6 +21,9 @@ import Volkswagen from "./pages/Clients/components/Volkswagen/Volkswagen";
 //import Lesson10 from "./lessons/Lesson10/Lesson10";
 //import Lesson11 from "./lessons/Lesson11";
 import Lesson13 from "./lessons/Lesson13/Lesson13";
+import Users from "./pages/Users/Users";
+import User from "./pages/Users/components/User/User";
+
 
 
 //homeworks
@@ -43,6 +47,8 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/users" element={<Users />} />
+                    {/* Пример консультации 7. В url добавляется параметр id(переменная) - синтаксис :id */}
+                    <Route path="/users/:id" element={<User/>}/>
                     <Route path="/clients" element={<Clients />} />
                     <Route path="/clients/tesla" element={<Tesla />} />
                     <Route path="/clients/toyota" element={<Toyota />} />
