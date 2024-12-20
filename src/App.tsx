@@ -4,13 +4,15 @@ import GlobalStyles from "./styles/GlobalStyles";
 
 import Layout from "./components/Layout/Layout";
 import About from "./pages/About/About";
-
+import Users from "./pages/Users/Users";
 import Home from "./pages/Home/Home";
 import Clients from "./pages/Clients/Clients";
 import Tesla from "./pages/Clients/components/Tesla/Tesla";
 import Toyota from "./pages/Clients/components/Toyota/Toyota";
 import Volkswagen from "./pages/Clients/components/Volkswagen/Volkswagen";
-
+import Lesson13 from "./lessons/Lesson13/Lesson13";
+import User from "./pages/Users/components/User/User";
+import Homework13 from "./homeworks/Homework13/Homework13";
 
 
 //lessons
@@ -20,10 +22,6 @@ import Volkswagen from "./pages/Clients/components/Volkswagen/Volkswagen";
 //import Lesson09 from "./lessons/Lesson09/Lesson09";
 //import Lesson10 from "./lessons/Lesson10/Lesson10";
 //import Lesson11 from "./lessons/Lesson11";
-import Lesson13 from "./lessons/Lesson13/Lesson13";
-import Users from "./pages/Users/Users";
-import User from "./pages/Users/components/User/User";
-
 
 
 //homeworks
@@ -54,6 +52,7 @@ function App() {
                     <Route path="/clients/toyota" element={<Toyota />} />
                     <Route path="/clients/volkswagen" element={<Volkswagen />} />
                     <Route path="/lesson13" element={<Lesson13 />} />
+                    <Route path="/homework13" element={<Homework13 />} />
                     <Route path='*' element='Page not found' />
                 </Routes>
             </Layout>}
