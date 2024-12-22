@@ -11,6 +11,11 @@ export const BlogManagementWrapper = styled.div`
     border: 1px solid;
     border-radius: 4px;
 `;
+
 export const TextAreaContainer = styled.textarea`
-outline: 1px;
+    outline: 1px;
+`;
+
+export const ButtonWrapper = styled.div`
+    width: 200px;
 `;
