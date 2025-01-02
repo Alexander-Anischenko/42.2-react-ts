@@ -59,6 +59,14 @@ function Layout({ children }: LayoutProps) {
                     >
                         Lesson13
                     </StyledNavLink>
+                    <StyledNavLink
+                        to="/homework13"
+                        style={({ isActive }) => ({
+                            textDecoration: isActive ? "underline" : "none",
+                        })}
+                    >
+                        Homework13
+                    </StyledNavLink>
                 </NavContainer>
             </Header>
             <Main>{children}</Main>
