@@ -30,9 +30,7 @@ export const InputsContainer = styled.div`
     gap: 20px;
     width: 100%;
 `;
-export const CheckboxLable = styled.label`
-
-`;
+export const CheckboxLable = styled.label``;
 
 export const CheckboxContainer = styled.input`
     width: 25px;
