@@ -7,12 +7,16 @@ import {
     CheckboxContainer,
     CheckboxLable,
     EmployeeFormWrapper,
-    FormTitle,
+    //FormTitle,
     InputsContainer,
 } from "./styles";
 import { EMPLOYEE_FORM_NAMES, EmployeeFormValue } from "./types";
+import { useEmployeeContext } from "../LayoutEmployees/LayoutEmployees";
 
 function EmployeeForm() {
+    //деструктуризация для извлечения значений объекта из контекста
+    const { setEmployee, setEmployeeCreated } = useEmployeeContext();
+
     const shema = Yup.object().shape({
         [EMPLOYEE_FORM_NAMES.NAME]: Yup.string()
             .required("Field name is required")
@@ -57,7 +61,18 @@ function EmployeeForm() {
         validationSchema: shema,
         validateOnChange: false,
         onSubmit: (values: EmployeeFormValue) => {
-            console.log(values);
+            //console.log(values);
+            //сохранение значений объекта в контексте 
+            setEmployee({
+                name: values[EMPLOYEE_FORM_NAMES.NAME],
+                lastName: values[EMPLOYEE_FORM_NAMES.LAST_NAME],
+                age: values[EMPLOYEE_FORM_NAMES.AGE],
+                position: values[EMPLOYEE_FORM_NAMES.POSITION],
+            });
+            // подтверждение создания сотрудника
+            setEmployeeCreated(true);
+            //сброс значений формы
+            formik.resetForm();
         },
     });
 
@@ -65,7 +80,7 @@ function EmployeeForm() {
 
     return (
         <EmployeeFormWrapper onSubmit={formik.handleSubmit}>
-            <FormTitle>Employee form</FormTitle>
+            {/* <FormTitle>Employee form</FormTitle> */}
             <InputsContainer>
                 <Input
                     label="Name*"
@@ -93,7 +108,7 @@ function EmployeeForm() {
                 />
                 <Input
                     label="Position*"
-                    id="employeeName"
+                    id="employeePosition"
                     placeholder="Enter your position"
                     name={EMPLOYEE_FORM_NAMES.POSITION}
                     onChange={formik.handleChange}

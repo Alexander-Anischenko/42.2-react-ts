@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import GlobalStyles from "./styles/GlobalStyles";
 
-import Layout from "./components/Layout/Layout";
+/* import Layout from "./components/Layout/Layout";
 import About from "./pages/About/About";
 import Users from "./pages/Users/Users";
 import Home from "./pages/Home/Home";
@@ -12,7 +12,10 @@ import Toyota from "./pages/Clients/components/Toyota/Toyota";
 import Volkswagen from "./pages/Clients/components/Volkswagen/Volkswagen";
 import Lesson13 from "./lessons/Lesson13/Lesson13";
 import User from "./pages/Users/components/User/User";
-import Homework13 from "./homeworks/Homework13/Homework13";
+import Homework13 from "./homeworks/Homework13/Homework13"; */
+import LayoutEmployees from "./components/LayoutEmployees/LayoutEmployees";
+import CreateEmployee from "./pages/CreateEmployee/CreateEmployee";
+import Employee from "./pages/Employee/Employee";
 
 
 //lessons
@@ -40,13 +43,13 @@ function App() {
     return (
         <BrowserRouter>
             <GlobalStyles />
-            {<Layout>
+            {/* <Layout>
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
-                    <Route path="/users" element={<Users />} />
+                    <Route path="/users" element={<Users />} /> */}
                     {/* Пример консультации 7. В url добавляется параметр id(переменная) - синтаксис :id */}
-                    <Route path="/users/:id" element={<User/>}/>
+                    {/* <Route path="/users/:id" element={<User/>}/>
                     <Route path="/clients" element={<Clients />} />
                     <Route path="/clients/tesla" element={<Tesla />} />
                     <Route path="/clients/toyota" element={<Toyota />} />
@@ -55,7 +58,14 @@ function App() {
                     <Route path="/homework13" element={<Homework13 />} />
                     <Route path='*' element='Page not found' />
                 </Routes>
-            </Layout>}
+            </Layout> */}
+            <LayoutEmployees>
+                <Routes>
+                <Route path="/create-employee" element={<CreateEmployee />} />
+                <Route path="/employee" element={<Employee />} />
+                <Route path='*' element='Page not found' />
+                </Routes>
+            </LayoutEmployees>
             {/* <Lesson06/> */}
             {/* <Lesson07/> */}
             {/* <Consultation04/> */}
